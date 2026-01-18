@@ -2,9 +2,9 @@
 
 # Legal \& Compliance Task Tracker
 
-
-
 A lightweight web-based application for tracking legal and compliance tasks, loosely inspired by the workflow and dashboard-style tools developed by OC Solutions in their "Operate" Track.
+
+View **Live Demo** [here](https://chinweilombu-dev.github.io/legal-compliance-task-tracker/) 
 
 
 ## Features
@@ -60,11 +60,14 @@ This project focuses on modelling a realistic legal/compliance workflow rather t
 
 \- Backend persistence (e.g. PostgreSQL or SupaBase Saas)
 
+\- Live-filtering search bar
+
 
 
 ## Author
 
 ### Chinwe Ilombu
+
 
 
 
