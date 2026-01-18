@@ -1,14 +1,13 @@
 
 
-\# Legal \& Compliance Task Tracker
+# Legal \& Compliance Task Tracker
 
 
 
 A lightweight web-based application for tracking legal and compliance tasks, loosely inspired by the workflow and dashboard-style tools developed by OC Solutions in their "Operate" Track.
 
 
-
-\## Features
+## Features
 
 \- Create, view, update and delete tasks (CRUD)
 
@@ -22,7 +21,18 @@ A lightweight web-based application for tracking legal and compliance tasks, loo
 
 
 
-\## Tech Stack
+## Use Cases
+
+- Provides a **dashboard** for tracking legal and compliance tasks, deadlines, and status updates.
+- Supports **process transparency** by replacing ad-hoc emails and spreadsheets with a clear, structured dashboard.
+- Helps non-legal users **navigate regulated workflows** through simple task categorisation and status tracking.
+- Improves **visibility and prioritisation** of time-sensitive obligations across teams.
+- Demonstrates how **lightweight, user-focused technology** can enhance control and efficiency in regulated environments.
+
+
+
+
+## Tech Stack
 
 \- HTML
 
@@ -32,13 +42,13 @@ A lightweight web-based application for tracking legal and compliance tasks, loo
 
 
 
-\## Design Approach
+## Design Approach
 
 This project focuses on modelling a realistic legal/compliance workflow rather than over-engineering technical complexity. The goal was to explore how simple, transparent tools can improve visibility and control in regulated processes.
 
 
 
-\## Future Improvements
+## Future Improvements
 
 \- Search and filtering
 
@@ -52,8 +62,9 @@ This project focuses on modelling a realistic legal/compliance workflow rather t
 
 
 
-\## Author
+## Author
 
-Chinwe Ilombu
+### Chinwe Ilombu
+
 
 
