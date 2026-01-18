@@ -1,0 +1,247 @@
+.page-container {
+    margin: 3%;
+    box-shadow: 0 0 8px grey;
+    min-width: 500px;
+}
+
+/* Styling for title/header of the page */
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header h1{
+    padding: 1%;
+    text-align: left;
+    font-size: 30px;
+}
+
+.header .menu-btn{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 0px;
+    margin-left: 15px;
+    font-size: 2em;
+    background-color: white;
+}
+
+.header .new-task-btn {
+    min-height: 45px;
+    margin: 20px 15px 10px auto;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(151, 150, 150);
+    border-color: black;
+}
+
+.header .new-task-btn:hover {
+    box-shadow: 0 0 12px grey;
+}
+
+
+/* Styling for the four status blocks */
+.status-blocks-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.status-block {
+    background-color: grey;
+    color: white;
+    margin: 10px;
+    min-height: 100px;
+    min-width: 100px;
+
+    display: flex;
+    align-items: center;
+}
+
+.status-block i {
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: 10%;
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.status-text {
+    margin-right: auto;
+    margin-left: 10%;
+    font-size: 20px;
+    padding-bottom: 1px;
+}
+
+.status-text p {
+    margin: 0;
+}
+
+.status-text .large-number{
+    font-size: 50px;
+}
+
+/* Styling for task list */
+.task-list-header{
+    margin: 0 2%;
+    display: flex;
+}
+
+.task-list-header form{
+    margin-left: auto;
+    
+}
+
+#task-search-box {
+    width: 300px;
+    height: 50px;
+    border-color: lightgray;
+}
+
+.task-list-header button i {
+    position: relative;
+    right: 50px;
+    bottom: 2px;
+}
+
+.task-table {
+    margin: 0 1%;
+}
+
+table tr td {
+    vertical-align: middle;
+}
+
+table tr .table-action-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+td button{
+    margin: 5px;
+}
+
+
+.task-table th:nth-child(2) {
+    width: 15%;
+}
+
+.task-table th:nth-child(3) {
+    width: 10%;
+}
+
+.task-table th:nth-child(4) {
+    width: 15%;
+}
+
+.task-table th:nth-child(5) {
+    width: 10%;
+}
+
+
+table tr .overdue {
+    position: relative;
+    text-align: center;
+}
+
+table tr p {
+    
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px 15px;
+    top: 10%;
+    left: 50%;
+    text-align: left;
+}
+
+table tr .overdue p {
+    background-color: #ea7b7b;
+}
+
+table tr .completed p {
+    background-color: #7cb58b;
+}
+
+table tr .in-progress p {
+    background-color: #4489c9;
+}
+
+table tr .not-started p {
+    background-color: grey;
+}
+
+/*Styling for modal*/
+.modal-header {
+    background-color: #000;
+    color: white;
+}
+
+.modal-body{
+    padding: 0;
+    margin: 3%;
+}
+
+.modal-body .inputField > div{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.modal-body .inputField > div label{
+    font-size: 20px;
+    font-weight: 500;
+    width: 120px;
+    margin-right: 10px;
+}
+
+#taskFormModal form .inputField > div label::after {
+    content:"*";
+    color: red;
+}
+
+form .inputField > div input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+
+.modal-body .inputField > div input,
+.modal-body .inputField > div select {
+    flex: 1;
+}
+
+.modal-body option[value="not-started"] {
+    color: grey;
+}
+
+.modal-body option[value="in-progress"] {
+    color: white;
+    background-color: #4489c9;
+}
+
+.modal-body option[value="completed"] {
+    color: white;
+    background-color: #7cb58b;
+}
+
+.modal-body option[value="overdue"] {
+    color: white;
+    background-color: #ea7b7b;
+}
+
+.modal-footer button{
+    background-color: grey;
+    border: none;
+    width: 100px;
+    font-size: 18px;
+}
+
+.modal-footer button:hover{
+    background-color: black;
+}
+
