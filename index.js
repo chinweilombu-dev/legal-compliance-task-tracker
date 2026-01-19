@@ -7,7 +7,8 @@ var form = document.getElementById("taskForm"),
     taskInfo = document.getElementById("tableData"),
     modal = document.getElementById("taskFormModal"),
     modalTitle = document.querySelector("#taskFormModal .modal-title"),
-    newTaskBtn = document.querySelector(".new-task-btn")
+    newTaskBtn = document.querySelector(".new-task-btn"),
+    searchInputBox = document.getElementById("taskSearchBox")
 
 var numOfCompleted = 0,
     numOfOverdue = 0,
@@ -19,13 +20,14 @@ var numOfCompleted = 0,
     totalTasksText = document.getElementById("totalTasks") 
 
 
- 
+// retrieve any pre-existing data from local storage and display to UI
 let getData = localStorage.getItem('taskData') ? JSON.parse(localStorage.getItem('taskData')) : []
 let getStatusData = localStorage.getItem('statusData') ? JSON.parse(localStorage.getItem('statusData')) : []
 let isEdit = false;  
 let editId
 showInfo()
 
+//function to reset HTML DOM elements of modal when "Add New Task" button is pressed
 newTaskBtn.addEventListener('click', ()=> {
     submitBtn.innerText = 'Submit',
     modalTitle.innerText = 'Please complete the required fields',
@@ -33,7 +35,18 @@ newTaskBtn.addEventListener('click', ()=> {
     form.reset()
 })
 
+//search functionality: filter by task name
+searchInputBox.addEventListener('input', (e) => {
+    const value = e.target.value.trim().toLowerCase()
+    console.log(value)
 
+    document.querySelectorAll('.taskDetails').forEach(task =>{
+        const isVisible = task.querySelector('td.taskName').textContent.toLowerCase().includes(value)
+        task.classList.toggle("hide", !isVisible)
+    })
+})
+
+//function to update UI and local storage when form submitted
 form.addEventListener('submit', (e)=> {
     e.preventDefault()
 
@@ -67,10 +80,11 @@ form.addEventListener('submit', (e)=> {
     form.reset()
 })
 
-
+//function to rerender and display tasks to UI after each update
 function showInfo(){
     document.querySelectorAll('.taskDetails').forEach(info => info.remove())
     getData.forEach((element, index) => {
+
         let statusTitle = ""
         switch (element.status) {
             case "not-started":
@@ -88,7 +102,7 @@ function showInfo(){
         }
 
         let createElement = `<tr class="taskDetails">
-            <td>${element.taskName}</td>
+            <td class="taskName">${element.taskName}</td>
             <td>${element.category}</td>
             <td>${element.dueDate}</td>
             <td class="${element.status}"><p>${statusTitle}</p></td>
@@ -114,6 +128,7 @@ function showInfo(){
 }
 showInfo()
 
+//function to adjust the modal form when editing a pre-existing task
 function editInfo(index, tName, tCategory, tDueDate, tStatus){
     isEdit = true
     editId = index
@@ -126,6 +141,7 @@ function editInfo(index, tName, tCategory, tDueDate, tStatus){
     modalTitle.innerText = "Update The Form"
 }
 
+//function to delete a task entry
 function deleteInfo(index){
     if(confirm("Are you sure want to delete?")){
         getData.splice(index, 1)
@@ -134,6 +150,7 @@ function deleteInfo(index){
     }
 }
 
+//function to update the frequencies of the status blocks
 function updateStatusFreq(){
     numOfCompleted = 0
     numOfOverdue = 0

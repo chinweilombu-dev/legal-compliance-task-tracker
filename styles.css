@@ -245,3 +245,6 @@ form .inputField > div input {
     background-color: black;
 }
 
+.hide {
+    display: none;
+}
