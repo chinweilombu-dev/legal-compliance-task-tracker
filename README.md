@@ -19,6 +19,8 @@ View **Live Demo** [here](https://chinweilombu-dev.github.io/legal-compliance-ta
 
 \- Data persistence using browser localStorage
 
+\- Live-filtering search bar
+
 
 
 ## Use Cases
@@ -60,13 +62,12 @@ This project focuses on modelling a realistic legal/compliance workflow rather t
 
 \- Backend persistence (e.g. PostgreSQL or SupaBase Saas)
 
-\- Live-filtering search bar
-
 
 
 ## Author
 
 ### Chinwe Ilombu
+
 
 
 
