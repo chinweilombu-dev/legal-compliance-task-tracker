@@ -62,13 +62,14 @@ This project focuses on modelling a realistic legal/compliance workflow rather t
 
 \- Backend persistence (e.g. PostgreSQL or SupaBase Saas)
 
-\- option to upload relevant documents/links alongside each task
+\- Option to upload relevant documents/links alongside each task
 
 
 
 ## Author
 
 ### Chinwe Ilombu
+
 
 
 
